@@ -54,3 +54,57 @@ console.log(getAverageTime_runner2.toFixed(2));
 
 // =======================================================================
 
+
+
+/**
+ * PART 3
+ *
+ *
+ * Modify the following to calculate the difference between the two accounts.
+ */
+
+/**
+ * declarations
+ */
+
+var TimsBankAccount = {
+    checking: 100,
+    savings: 10,
+    retirement: 1
+};
+
+
+var TimaddToBank = TimsBankAccount.checking + TimsBankAccount.savings + TimsBankAccount.retirement;
+function TimaddToBank(account, savings, retirement, checking) {
+    account.savings = account.savings + savings;
+    account.retirement = account.retirement + retirement;
+    account.checking = account.checking + checking;
+}
+
+console.log (TimaddToBank);
+
+var RobertosBankAccount = {
+    checking: 200,
+    savings: 50,
+    retirement: 19
+};
+
+var RobertosaddToBank = RobertosBankAccount.checking + RobertosBankAccount.savings + RobertosBankAccount.retirement;
+function RobertosaddToBank(account, savings, retirement, checking) {
+    account.savings = account.savings + savings;
+    account.retirement = account.retirement + retirement;
+    account.checking = account.checking + checking;
+}
+
+console.log (RobertosaddToBank);
+
+var sumOfTims = TimaddToBank;
+
+var sumOfRobertos = RobertosaddToBank;
+
+console.log(sumOfTims - sumOfRobertos); // should calculate to -158
+
+
+
+
+
